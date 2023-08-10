@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -masm=intel -s $(echo $CFILE) -o$(echo $CFILE | tr ".c" "".s)
+gcc -s -masm=intel $(echo $CFILE) -o$(echo $CFILE | cut -d. -f1 .s)
