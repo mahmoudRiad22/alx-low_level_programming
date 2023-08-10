@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 /**
  * main - Entry point
  *
@@ -9,7 +10,8 @@
  */
 int main(void)
 {
-char var[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-write(1, var, 59);
+const char *quote = "and that piece of art is useful\" - Dora Korpar, 2015-10-\
+19\n";
+	fwrite(quote, sizeof(char), strlen(quote), stdout);
 return (1);
 }
