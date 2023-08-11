@@ -10,8 +10,7 @@
  */
 int main(void)
 {
-	char FullAlphabet[] = "abcdefghijklmnopqrstuvwxyz"
-		"ABCDEFGHIJKLMNOPQRSTUVWXYZ$";
+char FullAlphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$";
 	int index = 0;
 
 	while (FullAlphabet[index] != '$')
