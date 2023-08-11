@@ -20,7 +20,7 @@ int main(void)
 
 		while (index2 < 10)
 		{
-			int index3 = index + 2;
+			int index3 = index2 + 1;
 
 			while (index3 < 10)
 			{
