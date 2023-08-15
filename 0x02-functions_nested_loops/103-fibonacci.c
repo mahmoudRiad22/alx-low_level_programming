@@ -8,7 +8,7 @@ int main(void)
 {
 	int counter = 0;
 	unsigned long int n1 = 1, n2 = 2, sum = 0, EvenSum = 0;
-	
+
 	counter++;
 	counter++;
 	EvenSum = n2;
