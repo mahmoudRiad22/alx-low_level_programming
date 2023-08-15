@@ -1,24 +1,4 @@
-#include <stdio.h>
-#include "_putchar"
-/**
- * main - Entry point
- *
- * decribtion:
- * a program responds to project 0-positive_or_negative.c
- * task(2-print_alphabet_x10.c)
- *
- * Return: 0 (success)
- */
-
-void print_alphabet_x10(void);
-
-int main(void)
-{
-	print_alphabet_x10();
-
-	return (0);
-}
-
+#include "main.h"
 /**
  * print_alphabet_x10 - a function prints the alphabet in lowercase 10 times
  *
