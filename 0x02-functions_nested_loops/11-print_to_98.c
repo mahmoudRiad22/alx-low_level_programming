@@ -6,9 +6,6 @@
  *
  * Return: void
  */
-
-void PrintNumber(int);
-
 void print_to_98(int number)
 {
 	while (number != 98)
@@ -26,9 +23,9 @@ void print_to_98(int number)
 }
 
 /**
- * PrintNumber- convert the number given ito digits then print them
+ * PrintNumber- convert the number given into its digits then print them
  *
- * @number: the given number
+ * @n: the given number
  *
  * Return: void
  */
@@ -48,7 +45,7 @@ void PrintNumber(int n)
 		_putchar('0');
 	}
 
-	while (n % 10 !=0)
+	while (n % 10 != 0)
 	{
 		DigitArray[counter++] = n % 10;
 		n = n / 10;
