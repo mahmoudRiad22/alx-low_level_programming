@@ -32,14 +32,26 @@ void jack_bauer(void)
 			h2++;
 			m1 = 0;
 		}
-		if (h2 > 3)
+		if (h2 > 9)
 		{
-			h1++;
-			h2 = 0;
+			if (h1 <= 2)
+			{
+				h1++;
+				h2 = 0;
+			}
 		}
-		if (h1 > 2)
+		if (h1 == 2 && h2 == 3 && m1 == 5 && m2 == 9)
 		{
+			_putchar(h1 + '0');
+			_putchar(h2 + '0');
+			_putchar(':');
+			_putchar(m1 + '0');
+			_putchar(m2 + '0');
+			_putchar('\n');
 			h1 = 0;
+			h2 = 0;
+			m1 = 0;
+			m2 = 0;
 			stop = 1;
 		}
 	}
