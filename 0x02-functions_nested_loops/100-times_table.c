@@ -27,20 +27,54 @@ if (n > 0 && n < 15)
 				_putchar(',');
 				_putchar(' ');
 				if ((i * ii) < 10)
+				{
+					_putchar(' ');
+				}
+				if ((i * ii) < 100)
 					_putchar(' ');
 			}
+			PrintNumber(i * ii);
 
-			if (i * ii < 10)
-				_putchar((i * ii) + '0');
-			else
-			{
-				_putchar(((i * ii) / 10) + '0');
-				_putchar(((i * ii) % 10) + '0');
-			}
 			ii++;
 		}
 		_putchar('\n');
 	}
 }
+}
 
+/**
+ * PrintNumber- convert the number given into its digits then print them
+ *
+ * @n: the given number
+ *
+ * Return: void
+ */
+void PrintNumber(int n)
+{
+	int counter = 0;
+	int DigitArray[1024];
+
+	if (n < 0)
+	{_putchar('-');
+		n = n / -1;
+	}
+	if (n == 0)
+		_putchar('0');
+	while (n % 10 != 0)
+	{
+		DigitArray[counter++] = n % 10;
+		n = n / 10;
+	}
+	while (n > 0)
+	{
+		if (n % 10 >= 0)
+			DigitArray[counter++] = n % 10;
+		n = n / 10;
+	}
+	if (counter)
+	while (counter > 0)
+	{
+		_putchar(DigitArray[counter - 1] + '0');
+		counter--;
+	}
 }
