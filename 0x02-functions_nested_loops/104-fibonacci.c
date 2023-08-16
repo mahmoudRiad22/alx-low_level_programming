@@ -14,7 +14,7 @@ int i, Zeroes;
 unsigned long fibo1 = 1, fibo2 = 2, sum, sum_extra;
 unsigned long fibo1_extra = 0, fibo2_extra = 0, M = 100000000;
 
-for (i = 0; i <= 98; i++)
+for (i = 0; i < 98; i++)
 {
 	if (fibo1_extra > 0)
 		printf("%lu", fibo1_extra);
@@ -36,7 +36,7 @@ for (i = 0; i <= 98; i++)
 	fibo2 = sum;
 	fibo2_extra = sum_extra;
 
-	if (i != 98)
+	if (i != 97)
 		printf(", ");
 	else
 		printf("\n");
