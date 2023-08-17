@@ -1,5 +1,6 @@
 #include "main.h"
-/**print_triangle - prints a triangle given its size using "#"
+/**
+ * print_triangle - prints a triangle given its size using "#"
  *
  * @size: size of the triabgle
  *
