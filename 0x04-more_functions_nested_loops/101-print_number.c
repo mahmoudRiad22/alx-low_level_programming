@@ -1,5 +1,4 @@
 #include "main.h"
-#include <math.h>
 /**
  * print_number - a function that print any integer
  *
@@ -12,7 +11,7 @@ void print_number(int n)
 {
 	if (n <= 2147483647 || n >= -2147483647)
 	{
-		int m, x, length;
+		int m = 1, x;
 
 		if (n == 0)
 		{
@@ -27,8 +26,12 @@ void print_number(int n)
 			n = n / -1;
 		}
 
-		length = len(n);
-		m = (int) pow((double)10, (double)(length - 1));
+		while (n >= m)
+		{
+			m = m * 10;
+		}
+		m = m / 10;
+
 		while (m > 1)
 		{
 			x = n / m;
