@@ -1,10 +1,14 @@
 #include <stdio.h>
+
+int largest_prime(long int n);
+
 /**
  * main - prints the largest prime factor of a number
  *
+ * Parameters: void
+ *
  * Return: 0
  */
-int largest_prime(long int n);
 
 int main(void)
 {
@@ -18,7 +22,7 @@ int main(void)
 /**
  * largest_prime - return the largest prime of a given number
  *
- * @n: given number
+ * @n: given number to find its prime
  *
  * Return: largest_prime
  */
