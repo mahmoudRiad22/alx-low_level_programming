@@ -11,7 +11,7 @@ void print_number(int n)
 {
 	if (n <= 2147483647 || n >= -2147483647)
 	{
-		int m = 1, x;
+		int filter = 1, out;
 
 		if (n == 0)
 		{
@@ -26,18 +26,18 @@ void print_number(int n)
 			n = n / -1;
 		}
 
-		while (n >= m)
+		while (n >= filter)
 		{
-			m = m * 10;
+			filter = filter * 10;
 		}
-		m = m / 10;
+		filter = filter / 10;/*reduce filter digits by 1*/
 
-		while (m > 1)
+		while (filter > 1)
 		{
-			x = n / m;
-			n = n % m;
-			m = m / 10;
-			_putchar(x + '0');
+			out = n / filter;
+			n = n % filter;
+			filter = filter / 10;/*adjust filter size */
+			_putchar(out + '0');
 		}
 		_putchar(n + '0');
 		}
@@ -54,13 +54,13 @@ void print_number(int n)
 
 int len(int n)
 {
-	int counter = 0;
+	int Len = 0;
 
 	while (n > 0)
 	{
-		counter++;
+		Len++;
 		n = n / 10;
 	}
 
-	return (counter);
+	return (Len);
 }
