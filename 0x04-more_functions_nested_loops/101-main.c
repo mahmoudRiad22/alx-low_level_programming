@@ -13,13 +13,13 @@ int main(void)
     _putchar('\n');
     print_number(1024);
     _putchar('\n');
-    print_number(0);
+    print_number(10);
     _putchar('\n');
     print_number(-98);
     _putchar('\n');
 print_number(1000000);
 _putchar('\n');
-print_number(-100001010);
+print_number(-1005500101);
 _putchar('\n');
 print_number(555);
 _putchar('\n');

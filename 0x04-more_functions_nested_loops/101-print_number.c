@@ -11,7 +11,7 @@ void print_number(int n)
 {
 	if (n <= 2147483647 || n >= -2147483647)
 	{
-		int filter = 1, out;
+		int filter = 1, out, Len;
 
 		if (n == 0)
 		{
@@ -25,12 +25,15 @@ void print_number(int n)
 			_putchar('-');
 			n = n / -1;
 		}
+		Len = len(n);
 
-		while (n >= filter)
+		while (Len - 1 > 0)
 		{
+			Len--;
 			filter = filter * 10;
 		}
-		filter = filter / 10;/*reduce filter digits by 1*/
+
+		/*filter = filter / 10;reduce filter digits by 1*/
 
 		while (filter > 1)
 		{
