@@ -9,9 +9,9 @@
 
 void print_number(int n)
 {
-	if (n <= 2147483647 || n >= -2147483647)
+	/*if (n <= 2147483647 || n >= -2147483647)*/
 	{
-		int filter = 1, out, Len;
+		unsigned int filter = 1, out, Len;
 
 		if (n == 0)
 		{
