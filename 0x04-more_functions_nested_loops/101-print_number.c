@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 /**
  * print_number - a function that print any integer
  *
@@ -11,13 +12,15 @@ void print_number(int n)
 {
 	if (n <= 2147483647 || n >= -2147483647)
 	{
-		int digits[10], i, length;
+		int m, x, length;
 
 		if (n == 0)
+		{
 			_putchar('0');
+			/*_putchar('\n');*/
+		}
 		else
 		{
-
 		if (n < 0)
 		{ /*remove negative sign after printing it*/
 			_putchar('-');
@@ -25,18 +28,19 @@ void print_number(int n)
 		}
 
 		length = len(n);
-
-		for (i = 0; i < length; i++)
-		{ /*save the number digit in reverse*/
-			digits[i] = n % 10;
-			n = (n / 10) - (digits[i] / 10);
+		m = (int) pow((double)10, (double)(length - 1));
+		while (m > 1)
+		{
+			x = n / m;
+			n = n % m;
+			m = m / 10;
+			_putchar(x + '0');
 		}
-
-		for (i = length - 1; i >= 0; i--)/*print number correctly*/
-			_putchar(digits[i] + '0');
+		_putchar(n + '0');
 		}
 	}
 }
+
 /**
  * len - return the number of digits in a given number
  *
