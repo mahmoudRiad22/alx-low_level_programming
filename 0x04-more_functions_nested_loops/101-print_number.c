@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_number - a function that print any integer
  *
@@ -19,30 +20,27 @@ void print_number(int n)
 		}
 		else
 		{
-		if (n < 0)
-		{ /*remove negative sign after printing it*/
-			_putchar('-');
-			n = n / -1;
-		}
-		unsignedN = n;
-		Len = len(unsignedN);
+			if (n < 0)
+			{ /*remove negative sign after printing it*/
+				_putchar('-');
+				n = n / -1;
+			}
+			unsignedN = n;
+			Len = len(unsignedN);
 
-		while (Len - 1 > 0)
-		{
-			Len--;
-			filter = filter * 10;
-		}
-
-		/*filter = filter / 10;reduce filter digits by 1*/
-
-		while (filter > 1)
-		{
-			out = unsignedN / filter;
-			unsignedN = unsignedN % filter;
-			filter = filter / 10;/*adjust filter size */
-			_putchar(out + '0');
-		}
-		_putchar(n + '0');
+			while (Len - 1 > 0)
+			{
+				Len--;
+				filter = filter * 10;
+			}
+			while (filter > 1)
+			{
+				out = unsignedN / filter;
+				unsignedN = unsignedN % filter;
+				filter = filter / 10;
+				_putchar(out + '0');
+			}
+			_putchar(unsignedN + '0');
 		}
 	}
 }
