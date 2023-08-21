@@ -8,6 +8,8 @@
  */
 void rev_string(char *s)
 {
+if (*s != '\0')
+{
 	char *start = s;
 
 	while (*s != '\0')
@@ -31,4 +33,5 @@ void rev_string(char *s)
 			break;
 		start++;
 	}
+}
 }
