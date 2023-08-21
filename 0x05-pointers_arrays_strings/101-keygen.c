@@ -16,7 +16,7 @@ int main(void)
 
 	srand(time(NULL));
 
-	while (size < 32767)/*cuz its the lowest value of RAND_MAX*/
+	while (size <= 32767)/*make sure its atleast = lowest value of RAND_MAX*/
 	{
 	Random = rand();
 	printf("%c", Random);
