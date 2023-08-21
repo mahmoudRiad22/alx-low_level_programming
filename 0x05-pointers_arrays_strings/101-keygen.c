@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include "main.h"
 /**
- * main - generates a random password  for the program 101-crackme
+ * main - Entry point
  *
  * @: void
  *
@@ -10,19 +11,43 @@
  */
 int main(void)
 {
-	int digits;
-	char Random;
-	unsigned int size = 0;
+	my_pass();
+	return (0);
+}
+/**
+ * my_pass - generates a password of 100 char to open 101-crackme
+ *
+ * @:void
+ *
+ * Return: void
+ */
 
-	srand(time(NULL));
-	
-	for (digits = 0; size <= 32767; digits++)
-	/*make sure its atleast = lowest value of RAND_MAX = 32767*/
+void my_pass(void)
+{
+	int i, my_magic_mana = 0, last_char, a_touch_of_magic = 2772;
+	int my_password[100];
+
+	srand(time(NULL));/*make the seed = current time*/
+
+	for (i = 0; i < 100; i++)
 	{
-		Random = rand();
-		printf("%c", Random);
-		size += Random;
-	}
+		/*password should not contain control*/
+		/*char so allowed from 48 to 126 = 78*/
 
-return (0);
+		my_password[i] = rand() % 78;
+
+		/*print out the char equivelent*/
+		putchar(my_password[i] + '0');
+
+		my_magic_mana += (my_password[i] + '0');
+
+		if (my_magic_mana > a_touch_of_magic)
+		{
+			last_char = a_touch_of_magic - my_magic_mana - '0';
+			my_magic_mana += last_char;
+			putchar(last_char + '0');
+			break;
+		}
+
+	}
 }
