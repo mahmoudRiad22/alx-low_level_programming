@@ -10,18 +10,18 @@
  */
 int main(void)
 {
-	int digits = 0;
+	int digits;
 	char Random;
 	unsigned int size = 0;
 
 	srand(time(NULL));
-
-	while (size <= 32767)/*make sure its atleast = lowest value of RAND_MAX*/
+	
+	for (digits = 0; size <= 32767; digits++)
+	/*make sure its atleast = lowest value of RAND_MAX = 32767*/
 	{
-	Random = rand();
-	printf("%c", Random);
-	size += Random;
-	digits++;
+		Random = rand();
+		printf("%c", Random);
+		size += Random;
 	}
 
 return (0);
