@@ -9,11 +9,11 @@
 
 int _atoi(char *s)
 {
-	int negatives = 0, x = 0, flag = 0;
+	int negatives = 0, flag = 0;
+	unsigned int x = 0;
 
 	if (*s == '\0')
 		return (0);
-	else
 	{
 		while (*s != '\0')
 		{
@@ -30,7 +30,7 @@ int _atoi(char *s)
 
 				while (*s >= '0' && *s <= '9')
 				{
-					x = (x * 10)+((*s) - '0');
+					x = (x * 10) + ((*s) - '0');
 					s++;
 				}
 				break;
