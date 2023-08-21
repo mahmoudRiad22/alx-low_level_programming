@@ -15,7 +15,10 @@ void puts_half(char *str)
 		str++;
 
 	/*change address to middle of the string*/
-	start = start + ((str - start) / 2);
+	if ((str - start) % 2 != 0)
+		start = start + (((str - start) + 1) / 2);
+	else
+		start = start + ((str - start) / 2);
 
 	while (*start != '\0')
 	{
