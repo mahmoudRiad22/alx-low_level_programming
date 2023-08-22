@@ -39,12 +39,17 @@ void my_pass(void)
 		/*print out the char equivelent*/
 		putchar(my_password[i] + '0');
 
+		/*all passwords has a meaning my angels*/
 		my_magic_mana += (my_password[i] + '0');
 
+		/*if i have enough magic to use the touch of magic then i stop*/
 		if (my_magic_mana > a_touch_of_magic)
 		{
+		/*find out how much i need mana to be exactly enough to use the touch of magic*/
 			last_char = a_touch_of_magic - my_magic_mana - '0';
+		/*make my mana is at the perfect lvl to cast the touch of magic*/
 			my_magic_mana += last_char;
+		/*cast out the last word of the spell*/
 			putchar(last_char + '0');
 			break;
 		}
