@@ -10,31 +10,14 @@
 
 void reverse_array(int *a, int n)
 {
-	int *start = a, end, stop, tmp;
+	int i, j, tmp;
 
-	if (n % 2 == 0)
-		stop = *(a + (n / 2) - 1);
-	if (n % 2 != 0)
-		stop = a[n / 2];
+	j = n - 1;
 
-	end = n - 1;
-
-	while (*start != stop)
+	for (i = 0; i < n / 2; i++)
 	{
-		/*start swapping*/
-		tmp = *start;
-		*start = *(a + end);
-		*(a + end) = tmp;
-
-		/*movee to next*/
-		start++;
-		end--;
-	}
-
-	if (n % 2 == 0)
-	{
-		tmp = *start;
-		*start = *(a + end);
-		*(a + end) = tmp;
+		tmp = a[i];
+		a[i] = a[j];
+		a[j--] = tmp;
 	}
 }

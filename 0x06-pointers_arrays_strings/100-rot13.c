@@ -9,32 +9,22 @@
 
 char *rot13(char *s)
 {
-char *start = s;
-int i = 0, x;
+	int i, j;
 
-while (s[i] != '\0')
-{
-while ((s[i] >= 65 && s[i] <= 90) || (s[i] >= 97 && s[i] <= 122))
-{
-if (*(s + i) >= 65 && *(s + i) <= 90)
-{
-x = s[i];
-x > 77 ? (x = x + 13 - ((x / 78) * 91) + 65) : (x = x + 13 - ((x / 78) * 91));
-s[i] = x;
-break;
-}
-else
-{
-x = s[i];
-x > 109 ? (x = x + 13 - (x / 110) * 123 + 97) : (x = x + 13 - (x / 110) * 123);
-s[i] = x;
-break;
-}
-break;
-}
-i++;
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-}
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; a[j] != '\0'; j++)
+		{
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+				break;
+			}
+		}
+	}
 
-return (start);
+	return (s);
 }
