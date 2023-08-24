@@ -5,7 +5,8 @@
  * @s1: 1st string
  * @s2: 2nd string
  *
- * Return : interger x
+ * Return: less than 0 if s1 < s2, more than 0 if s1 > s2, zero if s1 = s2
+ *
  */
 
 int _strcmp(char *s1, char *s2)
