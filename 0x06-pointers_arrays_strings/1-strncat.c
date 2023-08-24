@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _strncat - a function taht concatenates 2 strings
- * 		but for a limited number of char = n
+ *		but for a limited number of char = n
  *
  * @dest: string that will be ADDED TO
  * @src: the string that will be ADDED

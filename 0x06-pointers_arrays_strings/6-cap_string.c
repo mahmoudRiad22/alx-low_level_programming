@@ -3,7 +3,7 @@
  * cap_string -  a function that capitalize each word in a string
  *
  * @string: given string
- * 
+ *
  * Return: the adjusted string
  */
 
