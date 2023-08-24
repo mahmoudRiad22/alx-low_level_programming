@@ -6,37 +6,25 @@
  * @src: the string that we copy from
  * @dest: the string that we copy to
  *
- * Return: the adjusted string
+ * Return: the adjusted st
  */
-
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *start;
+	int i;
 
-	if (n <= 0)
-		return (dest);
-	start = dest;
+	i = 0;
 
-	while (n > 0)
+	while (src[i] != '\0' && i < n)
 	{
-		n--;
-		if (*src != '\0' || *dest != '\0')
-		{
-			*dest = *src;
-			dest++;
-			src++;
-		}
-		if (*src == '\0' && *dest != '\0')
-		{
-			while (n > 0)
-			{
-				n--;
-				*dest = '\0';
-				dest++;
-			}
-			break;
-		}
+		dest[i] = src[i];
+		i++;
 	}
 
-return (start);
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+
+	return (dest);
 }

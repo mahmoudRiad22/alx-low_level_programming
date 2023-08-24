@@ -10,22 +10,21 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	unsigned int x = 0;
-	/*int r;*/
+	int i = 0, ii = 0;
 
-	while (*s1 != '\0' && *s2 != '\0')
+	while (*s1 != '\0' || *s2 != '\0')
 	{
-		x++;
-		s1++;
-		s2++;
+		if (*s1 != '\0')
+		{
+			i++;
+			s1++;
+		}
+		if (*s2 != '\0')
+		{
+			ii++;
+			s2++;
+		}
 	}
 
-	if (*s1 != '\0' && *s2 == '\0')
-		x = x;
-	if (*s1 == '\0' && *s2 != '\0')
-		x = x * -1;
-	if (*s1 == '\0' && *s2 == '\0')
-		x = 0;
-
-	return (x);
+	return (i - ii);
 }
