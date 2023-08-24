@@ -11,10 +11,11 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
+	char *start;
+
 	if (n <= 0)
 		return (dest);
-
-	char *start = dest;
+	start = dest;
 
 	while (n > 0)
 	{
