@@ -6,7 +6,7 @@
  * @s: given string
  * @accept: string of bytes to search for
  *
- * Return: pointer of the bytes matching
+ * Return: adjusted string or NULL
  */
 char *_strpbrk(char *s, char *accept)
 {
