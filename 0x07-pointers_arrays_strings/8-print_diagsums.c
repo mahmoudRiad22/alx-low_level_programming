@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
  * print_diagsums - find all diagonal elemnts in a square matrix and sums them
- * 
+ *
  * @a: the given matix
  * @size: the size of the matrix
- * 
+ *
  * Return: the resul of the sum 
  */
 void print_diagsums(int *a, int size)

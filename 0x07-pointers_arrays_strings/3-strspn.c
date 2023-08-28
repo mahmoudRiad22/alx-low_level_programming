@@ -1,13 +1,13 @@
 #include "main.h"
-
 /**
  * _strspn -  a function that count the length of prefix string
- * 
+ *
  * @s: given string
  * @accept: the prefix string
- * 
+ *
  * Return: the length of the string found
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
 	int i, ii, counter, flag;

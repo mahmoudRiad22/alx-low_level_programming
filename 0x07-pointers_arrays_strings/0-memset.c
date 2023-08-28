@@ -1,7 +1,6 @@
 #include "main.h"
-
 /**
- * *_memset - fills memory with a given char for n times
+ * _memset - fills memory with a given char for n times
  * @s: memory to be filled
  * @b: char to be written
  * @n: number pf copies

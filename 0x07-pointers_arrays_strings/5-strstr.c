@@ -1,12 +1,11 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
  * _strstr - find a needle in a haystack
- * 
+ *
  * @haystack: the string to search in
  * @needle: the string we lookig for
- * 
+ *
  * Return: the needle location in the haystack
  */
 char *_strstr(char *haystack, char *needle)
