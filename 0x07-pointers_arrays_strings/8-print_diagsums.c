@@ -6,7 +6,7 @@
  * @a: the given matix
  * @size: the size of the matrix
  *
- * Return: the resul of the sum 
+ * Return: the resul of the sum
  */
 void print_diagsums(int *a, int size)
 {
