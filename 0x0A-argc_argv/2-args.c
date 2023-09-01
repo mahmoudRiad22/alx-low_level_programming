@@ -1,5 +1,6 @@
 #include <stdio.h>
-/** main - Entry point
+/**
+ * main - Entry point
  *
  * @argc: number of arguments in the command line
  * @argv: pointers array to each argument
@@ -7,7 +8,7 @@
  * Return: always 0
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 

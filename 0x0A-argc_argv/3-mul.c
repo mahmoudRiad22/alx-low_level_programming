@@ -10,7 +10,7 @@ int _atoi(char *s);
 
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	int mul,N1,N2;
+	int mul, N1, N2;
 
 	if (argc < 3 || argc > 3)
 	{
@@ -39,7 +39,8 @@ int _atoi(char *s)
 	int negatives = 0, flag = 0;
 	unsigned int x = 0;
 
-	if (*s == '\0')return (0);
+	if (*s == '\0')
+		return (0);
 	{
 		while (*s != '\0' || *s != ' ')
 		{
@@ -49,8 +50,7 @@ int _atoi(char *s)
 				s++;
 				continue;
 			}
-
-                        if (*s >= '0' && *s <= '9')
+			if (*s >= '0' && *s <= '9')
 			{
 				flag++;
 				while (*s >= '0' && *s <= '9')
