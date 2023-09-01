@@ -11,14 +11,23 @@ int _atoi(char *s);
 
 int main(int argc, char *argv[])
 {
-	int i, number = 0;
+	int i, number = 0, flag = 0;
 
 	for (i = 1; i < argc; i++)
 	{
-		number += _atoi(argv[i]);
+		if (_atoi(argv[i]) != 0 && (*argv[i] != 0))
+			number += _atoi(argv[i]);
+		else if (_atoi(argv[i]) == 0 && (*argv[i] != 0))
+		{
+			flag = 1;
+			break;
+		}
 		/*printf("%d\n", number);*/
 	}
-	printf("%d\n", number);
+	if (flag != 1)
+		printf("%d\n", number);
+	else
+		printf("Error\n");
 	return (0);
 }
 
