@@ -11,20 +11,30 @@ int _atoi(char *s);
 
 int main(int argc, char *argv[])
 {
-	int i, number = 0;
+	int i, ii, number = 0, result = 0;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (_atoi(argv[i]) != 0 && (*argv[i] != 0))
-			number += _atoi(argv[i]);
-		else if (_atoi(argv[i]) == 0 && (*argv[i] != 0))
+		ii = 0;
+		while (argv[i][ii] != '\0')
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[i][ii] > '9' || argv[i][ii] < '0')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			ii++;
 		}
-		/*printf("%d\n", number);*/
+
 	}
-		printf("%d\n", number);
+
+	for (i = 1; i < argc; i++)
+	{
+		number = _atoi(argv[i]);
+		if (number >= 0)
+			result += number;
+	}
+		printf("%d\n", result);
 	return (0);
 }
 
