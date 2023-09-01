@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -g -O -c *.c
+gcc -g -O -c ./*.c
