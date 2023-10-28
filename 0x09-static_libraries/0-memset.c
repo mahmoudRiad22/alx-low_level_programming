@@ -1,20 +1,20 @@
 #include "main.h"
-/**
- * _memset - fills memory with a given char for n times
- * @s: memory to be filled
- * @b: char to be written
- * @n: number pf copies
- *
- * Return: a pointer for the adjusted memory
- */
 
+/**
+ * *_memset - fills memory with a constant byte
+ * @s: memory area to be filled
+ * @b: char to copy
+ * @n: number of times to copy b
+ *
+ * Return: pointer to the memory area s
+ */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int limit;
+	unsigned int i;
 
-	for (limit = 0; limit < n; limit++)
+	for (i = 0; i < n; i++)
 	{
-		s[limit] = b;
+		s[i] = b;
 	}
 
 	return (s);
